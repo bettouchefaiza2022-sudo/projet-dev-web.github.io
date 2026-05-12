@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - AutoElite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/panier.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AutoElite</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="../content/produits.html">Nos Voitures</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Mon Panier</h1>
+        <p class="page-subtitle" id="cart-count-label">Chargement de votre panier...</p>
+
+        <div class="cart-layout">
+            <!-- Liste des articles -->
+            <div class="cart-items-section" id="cart-items-section">
+                <!-- Rempli par JavaScript -->
+            </div>
+            <!-- Résumé de commande -->
+            <aside class="cart-summary">
+                <div class="summary-title">Récapitulatif</div>
+                
+                <div class="summary-row">
+                    <span>Nombre de véhicules</span>
+                    <span id="item-count">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Sous-total</span>
+                    <span id="subtotal">0 €</span>
+                </div>
+                <div class="summary-row">
+                    <span>Livraison</span>
+                    <span>Gratuite</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total TTC</span>
+                    <span id="total">0 €</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn">Passer la commande →</button>
+                <button class="clear-btn" id="clear-cart-btn">🗑 Vider le panier</button>
+                <a href="produits.html" class="continue-link">← Continuer mes achats</a>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 AutoElite. Tous droits réservés.</p>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="../javascript/panier.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Voitures - AutoElite</title>
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/produits.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">AutoElite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html" class="active">Nos Voitures</a></li>
+                <li><a href="../content/panier.html">Panier</a></li>
+            </ul>
+            <div class="auth-buttons" id="auth-nav">
+                <a href="connexion.html" class="btn btn-outline">Connexion</a>
+                <a href="inscription.html" class="btn btn-primary">Inscription</a>
+            </div>
+            <div class="user-info hidden" id="user-nav">
+                <span id="user-name"></span>
+                <button id="logout-btn" class="btn btn-outline">Déconnexion</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-header">
+            <h1>Notre Catalogue de Voitures</h1>
+            <p class="subtitle">Découvrez notre sélection de véhicules premium</p>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher une voiture...">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-category="Tous">Tous</button>
+                <button class="filter-btn" data-category="Electrique">Électrique</button>
+                <button class="filter-btn" data-category="Berline">Berline</button>
+                <button class="filter-btn" data-category="SUV">SUV</button>
+                <button class="filter-btn" data-category="Sportive">Sportive</button>
+            </div>
+        </section>
+
+        <section id="products-grid" class="products-grid"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AutoElite. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Modal Couleur -->
+    <!-- Modal Couleur -->
+<div id="color-modal" class="modal hidden">
+    <div class="modal-content">
+
+        <h3 id="modal-car-name">Choisir une couleur</h3>
+
+        <!-- couleurs -->
+        <div id="color-options" class="color-options"></div>
+
+        <!-- nom couleur -->
+        <div id="selected-color-name" class="selected-color-name"></div>
+
+        <!-- boutons -->
+        <div class="modal-buttons">
+            <button id="modal-cancel" class="btn-secondary">Annuler</button>
+            <button id="modal-add" class="btn-primary">Confirmer</button>
+        </div>
+
+    </div>
+</div>
+
+    <script src="../javascript/produits.js"></script>
+</body>
+</html>

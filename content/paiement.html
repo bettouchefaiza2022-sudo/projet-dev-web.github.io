@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Sécurisé - AutoElite</title>
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/paiement.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">AutoElite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Voitures</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paiement-container">
+            <div class="paiement-header">
+                <h1>Paiement Sécurisé</h1>
+                <p class="subtitle">Transaction protégée • SSL 256-bit</p>
+            </div>
+
+            <div class="paiement-content">
+                
+                <!-- Résumé -->
+                <div class="order-summary">
+                    <h2>Résumé de votre commande</h2>
+                    <div id="order-items"></div>
+                    <div id="order-total" class="order-total"></div>
+                </div>
+
+                <!-- Paiement -->
+                <div class="payment-form">
+                    <h2>Informations de paiement</h2>
+                    
+                    <form id="payment-form">
+                        
+                        <!-- Choix du mode de paiement -->
+                        <div class="form-group">
+                            <label>Mode de paiement</label>
+                            <div class="payment-methods">
+                                <label class="payment-option active" data-type="card">
+                                    <input type="radio" name="payment-type" value="card" checked>
+                                    <span>Carte Bancaire</span>
+                                </label>
+                                <label class="payment-option" data-type="paypal">
+                                    <input type="radio" name="payment-type" value="paypal">
+                                    <span>PayPal</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Formulaire Carte Bancaire -->
+                        <div id="card-form">
+                            <div class="form-group">
+                                <label for="card-name">Nom sur la carte</label>
+                                <input type="text" id="card-name" placeholder="Jean Dupont" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card-number">Numéro de carte</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Date d'expiration</label>
+                                    <input type="text" id="expiry" placeholder="MM/AAAA" maxlength="7" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PayPal (caché par défaut) -->
+                        <div id="paypal-form" class="hidden">
+                            <p style="text-align:center; padding: 2rem 0; color:#3b82f6; font-weight:600;">
+                                Vous allez être redirigé vers PayPal pour finaliser le paiement en toute sécurité.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="pay-button" id="pay-button">
+                            Payer maintenant
+                        </button>
+                    </form>
+
+                    <p class="secure-note">
+                        🔒 Paiement 100% sécurisé - Vos données sont protégées
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AutoElite. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../javascript/paiement.js"></script>
+</body>
+</html>

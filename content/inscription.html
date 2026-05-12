@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - AutoElite</title>
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/connexion.css">
+    <link rel="stylesheet" href="../style/inscription.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">AutoElite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../content/produits.html">Nos Voitures</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Créer un compte</h2>
+            <form id="register-form" action="../content/connexion.html">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" required placeholder="Entrez votre nom complet">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Entrez votre adresse email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" required placeholder="Entrez votre mot de passe" minlength="6">
+                    <small>Minimum 6 caractères</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-password" required placeholder="Entrez à nouveau votre mot de passe">
+                </div>
+                <div id="status-message" class="hidden"></div>
+                <button type="submit" class="btn btn-primary btn-full">S'inscrire</button>
+            </form>
+            <p class="form-footer">Déjà un compte ? <a href="../content/connexion.html">Se connecter</a></p>
+        </div>
+    </main>
+
+    <script type="module" src="../javascript/inscription.js"></script>
+</body>
+</html>

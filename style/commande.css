@@ -1,0 +1,231 @@
+.commande-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+.commande-container h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+.ajout-rapide {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.ajout-rapide h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Barre de recherche améliorée */
+.search-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.search-group {
+    position: relative;
+}
+
+#search-voiture {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+#search-voiture:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    outline: none;
+}
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 5px;
+    display: none;
+}
+.search-results.show {
+    display: block;
+}
+.search-results div {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 1rem;
+}
+.search-results div:hover {
+    background-color: #f0f9ff;
+    color: var(--primary);
+}
+
+.search-results div:last-child {
+    border-bottom: none;
+}
+#couleur {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.commande-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+.panier-section,
+.commande-form {
+    background: white;
+    padding: 2.2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.panier-section h2,
+.commande-form h2 {
+    margin-bottom: 1.8rem;
+    color: var(--dark);
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+.cart-item:last-child {
+    border-bottom: none;
+}
+.cart-item-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+.cart-item-info p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+}
+.cart-item-actions {
+    text-align: right;
+}
+.remove-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+.remove-btn:hover {
+    background: #dc2626;
+}
+.panier-total {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e2e8f0;
+}
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.total-price {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+.empty-cart {
+    text-align: center;
+    color: #94a3b8;
+    padding: 3rem 0;
+    font-style: italic;
+}
+.form-group {
+    margin-bottom: 1.6rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #374151;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.95rem 1.2rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    outline: none;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.btn-large {
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-large:hover {
+    background: #0056b3;
+}
+@media (max-width: 992px) {
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .commande-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .ajout-rapide {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .commande-container {
+        padding: 0 1rem;
+    }
+    
+    .commande-container h1 {
+        font-size: 2.3rem;
+    }
+}

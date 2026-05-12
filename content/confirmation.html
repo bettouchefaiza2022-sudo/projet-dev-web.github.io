@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - AutoElite</title>
+    <link rel="stylesheet" href="../style/common.css">
+    <style>
+        .confirmation-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-message {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .confirmation-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">AutoElite</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="produits.html">Nos Voitures</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            <div class="success-icon">✅</div>
+            <h1 class="confirmation-title">Paiement Confirmé !</h1>
+            <p class="confirmation-message">
+                Merci pour votre achat ! Votre commande a été traitée avec succès.<br>
+                Vous recevrez un email de confirmation dans les prochaines minutes.
+            </p>
+            <div class="confirmation-actions">
+                <a href="../index.html" class="btn btn-primary">Retour à l'accueil</a>
+                <a href="produits.html" class="btn btn-outline">Continuer mes achats</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AutoElite. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
