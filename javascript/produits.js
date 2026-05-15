@@ -1016,8 +1016,11 @@
 const grid = document.getElementById('products-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('search-input');
+const currencyToggleBtn = document.getElementById('currency-toggle');
 
 // ==================== VARIABLES ====================
+const exchangeRate = 156.5; // 1 EUR = 156.5 DZD
+let currentCurrency = 'EUR';
 let currentCar = null;
 let currentFilter = "Tous";
 let selectedColor = { name: "", hex: "" };
@@ -1149,7 +1152,7 @@ function displayCars(carsToDisplay) {
 
                 <div class="product-footer">
                     <span class="product-price">
-                        ${car.price.toLocaleString('fr-FR')} €
+                        ${formatPrice(car.price)}
                     </span>
 
                     <button class="btn-add" data-id="${car.id}">
@@ -1168,6 +1171,14 @@ function displayCars(carsToDisplay) {
             if (car) handleAddToCart(car);
         });
     });
+}
+
+function formatPrice(price) {
+    if (currentCurrency === 'DZD') {
+        return `${Math.round(price * exchangeRate).toLocaleString('fr-FR')} DA`;
+    }
+
+    return `${price.toLocaleString('fr-FR')} €`;
 }
 
 // ==================== FILTRES + SEARCH ====================
@@ -1191,6 +1202,14 @@ function filterAndSearch() {
 
 // events
 searchInput.addEventListener('input', filterAndSearch);
+
+currencyToggleBtn.addEventListener('click', () => {
+    currentCurrency = currentCurrency === 'EUR' ? 'DZD' : 'EUR';
+    currencyToggleBtn.textContent = currentCurrency === 'EUR'
+        ? 'DZD'
+        : 'EURO';
+    filterAndSearch();
+});
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
