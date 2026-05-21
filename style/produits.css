@@ -170,12 +170,6 @@
     transform: scale(0.96);
 }
 
-/* Icône optionnelle */
-.btn-add::before {
-    content: "🛒";
-    font-size: 1.1rem;
-}
-
 /* ====================== AUTRES STYLES (gardés et nettoyés) ====================== */
 .products-header {
     text-align: center;

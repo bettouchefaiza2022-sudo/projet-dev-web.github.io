@@ -1117,7 +1117,7 @@ function addToCartWithColor(car, color) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    alert(`${car.name} (${color.name}) ajouté au panier !`);
+    alert(`${car.name} (${color.name}) ajouté à la commande !`);
 }
 
 // ==================== CLICK ACHAT ====================
@@ -1156,7 +1156,7 @@ function displayCars(carsToDisplay) {
                     </span>
 
                     <button class="btn-add" data-id="${car.id}">
-                        Acheter
+                        Commander
                     </button>
                 </div>
             </div>

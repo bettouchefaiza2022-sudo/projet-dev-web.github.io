@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = getCart();
 
         if (cart.length === 0) {
-            cartCountLabel.textContent = "Votre panier est vide";
+            cartCountLabel.textContent = "Votre commande est vide";
             cartItemsSection.innerHTML = `
                 <div style="text-align:center; padding:80px 20px; background:white; border-radius:20px;">
-                    <h2>Aucun véhicule dans votre panier</h2>
+                    <h2>Aucun véhicule dans votre commande</h2>
                     <p style="margin:15px 0 25px;">Ajoutez des voitures depuis notre catalogue.</p>
                     <a href="produits.html" style="color:var(--primary); font-weight:600;">Découvrir nos voitures →</a>
                 </div>`;
@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
-        showToast("Produit retiré du panier");
+        showToast("Produit retiré de la commande");
     });
 });
 
-        cartCountLabel.textContent = `${cart.length} véhicule${cart.length > 1 ? 's' : ''} dans votre panier`;
+        cartCountLabel.textContent = `${cart.length} véhicule${cart.length > 1 ? 's' : ''} dans votre commande`;
         itemCountEl.textContent = cart.length;
         subtotalEl.textContent = subtotal.toLocaleString('fr-FR') + " €";
         totalEl.textContent = subtotal.toLocaleString('fr-FR') + " €";
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = getCart();
         
         if (cart.length === 0) {
-            showToast("Votre panier est vide !");
+            showToast("Votre commande est vide !");
             return;
         }
 
@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===================== VIDER PANIER =====================
     clearBtn.addEventListener('click', () => {
-        if (confirm("Voulez-vous vraiment vider tout le panier ?")) {
+        if (confirm("Voulez-vous vraiment vider la commande ?")) {
             localStorage.removeItem('cart');
             renderCart();
-            showToast("Panier vidé avec succès");
+            showToast("Commande vidée avec succès");
         }
     });
 

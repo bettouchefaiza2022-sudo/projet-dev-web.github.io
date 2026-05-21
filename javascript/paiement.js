@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         if (cart.length === 0) {
-            orderItems.innerHTML = '<p style="text-align: center; color: #666;">Votre panier est vide</p>';
+            orderItems.innerHTML = '<p style="text-align: center; color: #666;">Votre commande est vide</p>';
             orderTotal.innerHTML = '';
             return;
         }

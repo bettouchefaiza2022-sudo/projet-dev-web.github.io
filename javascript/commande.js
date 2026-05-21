@@ -157,7 +157,7 @@ function setupSearch() {
     });
 }
 
-// ==================== AJOUT AU PANIER ====================
+// ==================== AJOUT À LA COMMANDE ====================
 document.getElementById('btn-ajouter-rapide').addEventListener('click', () => {
     const searchInput = document.getElementById('search-voiture');
     const couleur = document.getElementById('couleur').value;
@@ -199,7 +199,7 @@ document.getElementById('btn-ajouter-rapide').addEventListener('click', () => {
     document.getElementById('couleur').value = '';
     selectedCar = null;
 
-    alert("Voiture ajoutée au panier avec succès !");
+    alert("Voiture ajoutée à la commande avec succès !");
 });
 
 // ==================== AFFICHAGE PANIER & FORMULAIRE (inchangé) ====================
@@ -208,7 +208,7 @@ function displayCart() {
     const totalEl = document.getElementById('panier-total');
 
     if (cart.length === 0) {
-        container.innerHTML = `<p class="empty-cart">Votre panier est vide.</p>`;
+        container.innerHTML = `<p class="empty-cart">Votre commande est vide.</p>`;
         totalEl.innerHTML = '';
         return;
     }
@@ -258,7 +258,7 @@ function handleFormSubmit() {
         e.preventDefault();
 
         if (cart.length === 0) {
-            alert("Le panier est vide !");
+            alert("La commande est vide !");
             return;
         }
 
