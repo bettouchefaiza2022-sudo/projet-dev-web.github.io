@@ -1,4 +1,4 @@
-/* ====================== PAIEMENT - STYLE HARMONISÉ ====================== */
+
 :root {
     --primary: #007BFF;
     --dark: #0f172a;
@@ -31,7 +31,7 @@ header nav {
     gap: 2rem;
 }
 
-/* Header */
+
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
@@ -39,7 +39,7 @@ header nav {
     text-decoration: none;
 }
 
-/* Main Container */
+
 .paiement-container {
     max-width: 1200px;
     margin: 1rem auto;
@@ -64,21 +64,21 @@ header nav {
     font-size: 1.15rem;
 }
 
-/* Layout */
+
 .paiement-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
 }
 
-/* ==================== FORMULAIRE PAIEMENT ==================== */
+
 .payment-form {
     background: white;
-    padding: 2rem;          /* ⬅️ moins d’espace interne */
+    padding: 2rem;          
     border-radius: 20px;
     box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-    max-width: 480px;       /* ⬅️ limite la largeur */
-    margin-left: auto;      /* ⬅️ garde l’alignement à droite */
+    max-width: 480px;       
+    margin-left: auto;      
 }
 
 .payment-form h2 {
@@ -88,7 +88,7 @@ header nav {
     color: var(--dark);
 }
 
-/* Modes de paiement */
+
 .payment-methods {
     display: flex;
     gap: 15px;
@@ -118,7 +118,7 @@ header nav {
     transform: scale(1.02);
 }
 
-/* Champs de formulaire */
+
 .form-group {
     margin-bottom: 1.6rem;
 }
@@ -151,7 +151,7 @@ header nav {
     gap: 1.5rem;
 }
 
-/* Bouton Payer */
+
 #pay-button {
     width: 100%;
     padding: 1.1rem;
@@ -171,7 +171,7 @@ header nav {
     transform: translateY(-3px);
 }
 
-/* Note sécurité */
+
 .secure-note {
     text-align: center;
     color: #10b981;
@@ -183,12 +183,12 @@ header nav {
     gap: 8px;
 }
 
-/* Classe utilitaire */
+
 .hidden {
     display: none !important;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
     .paiement-content {
         grid-template-columns: 1fr;
@@ -206,18 +206,18 @@ header nav {
         padding: 1.8rem 1.4rem;
     }
 }
-/* ====================== RESUME COMMANDE STYLE PANIER ====================== */
+
 
 .order-summary {
     background: white;
-    padding: 2.2rem; /* ⬅️ un peu plus grand */
+    padding: 2.2rem; 
     border-radius: 20px;
     box-shadow: 0 6px 25px rgba(0,0,0,0.09);
     height: fit-content;
     position: sticky;
     top: 100px;
-    width: 150%;          /* ⬅️ +10% largeur */
-    max-width: 460px;     /* ⬅️ évite que ça devienne trop grand */
+    width: 150%;          
+    max-width: 460px;     
 }
 
 .order-summary h2 {
@@ -228,7 +228,7 @@ header nav {
     border-bottom: 1px solid var(--border);
 }
 
-/* Chaque produit */
+
 .order-item {
     display: flex;
     align-items: center;
@@ -285,7 +285,7 @@ header nav {
     color: var(--dark);
 }
 
-/* Total */
+
 .order-total {
     margin-top: 20px;
     padding-top: 15px;
@@ -308,15 +308,15 @@ header nav {
     border-top: 1px solid var(--border);
 }
 
-/* ====================== ALIGNEMENT GLOBAL ====================== */
+
 
 .paiement-content {
     display: grid;
-    grid-template-columns: 380px 1fr; /* comme panier */
+    grid-template-columns: 380px 1fr; 
     gap: 3rem;
 }
 
-/* Responsive identique panier */
+
 @media (max-width: 900px) {
     .paiement-content {
         grid-template-columns: 1fr;

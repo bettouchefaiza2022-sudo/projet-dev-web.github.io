@@ -1018,14 +1018,14 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('search-input');
 const currencyToggleBtn = document.getElementById('currency-toggle');
 
-// ==================== VARIABLES ====================
-const exchangeRate = 156.5; // 1 EUR = 156.5 DZD
+
+const exchangeRate = 156.5; 
 let currentCurrency = 'EUR';
 let currentCar = null;
 let currentFilter = "Tous";
 let selectedColor = { name: "", hex: "" };
 
-// couleurs
+
 const availableColors = [
     { name: "Noir Obsidienne", hex: "#0A0A0A" },
     { name: "Blanc Perle", hex: "#F8F8F8" },
@@ -1037,7 +1037,7 @@ const availableColors = [
     { name: "Gris Argent", hex: "#A8A8A8" }
 ];
 
-// ==================== MODAL ====================
+
 const modal = document.getElementById('color-modal');
 const modalName = document.getElementById('modal-car-name');
 const colorOptions = document.getElementById('color-options');
@@ -1045,7 +1045,7 @@ const selectedColorNameEl = document.getElementById('selected-color-name');
 const modalAdd = document.getElementById('modal-add');
 const modalCancel = document.getElementById('modal-cancel');
 
-// ouvrir modal
+
 function openColorModal(car) {
     currentCar = car;
 
@@ -1080,12 +1080,12 @@ function openColorModal(car) {
     modal.classList.remove('hidden');
 }
 
-// fermer modal
+
 modalCancel.addEventListener('click', () => {
     modal.classList.add('hidden');
 });
 
-// confirmer couleur
+
 modalAdd.addEventListener('click', () => {
     if (!selectedColor.hex) {
         alert("Veuillez choisir une couleur");
@@ -1096,7 +1096,7 @@ modalAdd.addEventListener('click', () => {
     modal.classList.add('hidden');
 });
 
-// ==================== PANIER ====================
+
 function addToCartWithColor(car, color) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -1120,12 +1120,12 @@ function addToCartWithColor(car, color) {
     alert(`${car.name} (${color.name}) ajouté à la commande !`);
 }
 
-// ==================== CLICK ACHAT ====================
+
 function handleAddToCart(car) {
     openColorModal(car);
 }
 
-// ==================== AFFICHAGE ====================
+
 function displayCars(carsToDisplay) {
     grid.innerHTML = '';
 
@@ -1143,7 +1143,7 @@ function displayCars(carsToDisplay) {
 
         card.innerHTML = `
             <img src="${car.image}" class="product-image"
-                 onerror="this.src='https://picsum.photos/id/1074/600/400';">
+                 onerror="this.src='https:
 
             <div class="product-info">
                 <div class="product-category">${car.category} • ${car.etat}</div>
@@ -1181,7 +1181,7 @@ function formatPrice(price) {
     return `${price.toLocaleString('fr-FR')} €`;
 }
 
-// ==================== FILTRES + SEARCH ====================
+
 function filterAndSearch() {
     const term = searchInput.value.toLowerCase().trim();
     let filtered = cars;
@@ -1200,7 +1200,7 @@ function filterAndSearch() {
     displayCars(filtered);
 }
 
-// events
+
 searchInput.addEventListener('input', filterAndSearch);
 
 currencyToggleBtn.addEventListener('click', () => {
@@ -1221,5 +1221,5 @@ filterBtns.forEach(btn => {
     });
 });
 
-// init
+
 displayCars(cars);

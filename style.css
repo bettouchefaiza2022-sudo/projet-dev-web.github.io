@@ -74,7 +74,7 @@
     color: var(--secondary);
     font-size: 1rem;
 }
-/* Section Expérience */
+
 .experience-section {
     background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
     padding: 3rem 2rem;
@@ -144,7 +144,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Section Copyright */
+
 .copyright-section {
     background: #1a1a1a;
     padding: 2rem;
@@ -267,7 +267,7 @@ html {
     color: var(--dark);
 }
 
-/* Footer amélioré */
+
 .footer-content {
     display: flex;
     justify-content: space-around;
@@ -311,7 +311,7 @@ html {
     background: #f8f9fa;
 }
 
-/* Services Footer */
+
 .footer-services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -349,7 +349,7 @@ html {
     margin: 0;
 }
 
-/* Footer Content Improved */
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -393,7 +393,7 @@ html {
     text-decoration: underline;
 }
 
-/* Copyright Simple */
+
 .copyright-section {
     background: #f8f9fa;
     padding: 0.2rem 2rem;

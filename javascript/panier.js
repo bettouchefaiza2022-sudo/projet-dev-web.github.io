@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             div.className = 'cart-item';
 
             div.innerHTML = `
-                <img src="${item.image || 'https://picsum.photos/id/1074/600/400'}" 
+                <img src="${item.image || 'https:
                      class="cart-item-img" 
                      alt="${item.name}"
-                     onerror="this.src='https://picsum.photos/id/1074/600/400'">
+                     onerror="this.src='https:
 
                 <div class="cart-item-info">
                     <div class="cart-item-category">${item.category || 'Voiture'}</div>
@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsSection.appendChild(div);
         });
 
-        // 👉 Bouton retirer
+        
         document.querySelectorAll('.remove-item-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-id');
         let cart = getCart();
 
-        // 👉 supprimer UNE SEULE occurrence
+        
         const index = cart.findIndex(item => item.id == id);
 
         if (index !== -1) {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutBtn.disabled = false;
     }
 
-    // ===================== CHECKOUT =====================
+    
     checkoutBtn.addEventListener('click', () => {
         const cart = getCart();
         
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = "paiement.html";
     });
 
-    // ===================== VIDER PANIER =====================
+    
     clearBtn.addEventListener('click', () => {
         if (confirm("Voulez-vous vraiment vider la commande ?")) {
             localStorage.removeItem('cart');
@@ -129,6 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialisation
+    
     renderCart();
 });

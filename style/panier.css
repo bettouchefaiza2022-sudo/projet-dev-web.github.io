@@ -1,4 +1,4 @@
-/* ====================== PANIER CSS ====================== */
+
 body {
     font-family: 'DM Sans', sans-serif;
     background: #f1f5f9;
@@ -174,7 +174,7 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
     .cart-layout {
         grid-template-columns: 1fr;
