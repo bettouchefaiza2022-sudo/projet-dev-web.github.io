@@ -146,18 +146,19 @@
     background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
     border: none;
-    padding: 0.5rem 1.2rem;   /* ⬅️ plus petit */
+    padding: 1rem 0.8rem;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.85rem;       /* ⬅️ texte réduit */
+    font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;                 /* ⬅️ espace réduit */
+    gap: 6px;
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-    min-width: 120px;         /* ⬅️ largeur réduite */
+    min-width: 90px;
+    width: auto;
 }
 
 .btn-add:hover {
@@ -170,10 +171,8 @@
     transform: scale(0.96);
 }
 
-/* Icône optionnelle */
 .btn-add::before {
-    content: "🛒";
-    font-size: 1.1rem;
+    content: none;
 }
 
 /* ====================== AUTRES STYLES (gardés et nettoyés) ====================== */

@@ -1025,6 +1025,15 @@ let currentCar = null;
 let currentFilter = "Tous";
 let selectedColor = { name: "", hex: "" };
 
+function initializeCartSession() {
+    if (!sessionStorage.getItem('cartSessionStarted')) {
+        localStorage.removeItem('cart');
+        sessionStorage.setItem('cartSessionStarted', 'true');
+    }
+}
+
+initializeCartSession();
+
 // couleurs
 const availableColors = [
     { name: "Noir Obsidienne", hex: "#0A0A0A" },
@@ -1094,6 +1103,7 @@ modalAdd.addEventListener('click', () => {
 
     addToCartWithColor(currentCar, selectedColor);
     modal.classList.add('hidden');
+    window.location.href = 'panier.html';
 });
 
 // ==================== PANIER ====================
@@ -1117,7 +1127,7 @@ function addToCartWithColor(car, color) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    alert(`${car.name} (${color.name}) ajouté au panier !`);
+    alert(`${car.name} (${color.name}) ajouté à la commande !`);
 }
 
 // ==================== CLICK ACHAT ====================
@@ -1156,7 +1166,7 @@ function displayCars(carsToDisplay) {
                     </span>
 
                     <button class="btn-add" data-id="${car.id}">
-                        Acheter
+                        Commander
                     </button>
                 </div>
             </div>

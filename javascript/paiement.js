@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderItems = document.getElementById('order-items');
     const orderTotal = document.getElementById('order-total');
 
+    function initializeCartSession() {
+        if (!sessionStorage.getItem('cartSessionStarted')) {
+            localStorage.removeItem('cart');
+            sessionStorage.setItem('cartSessionStarted', 'true');
+        }
+    }
+
+    initializeCartSession();
+
     // Charger et afficher le résumé de commande
     loadOrderSummary();
 
@@ -151,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         if (cart.length === 0) {
-            orderItems.innerHTML = '<p style="text-align: center; color: #666;">Votre panier est vide</p>';
+            orderItems.innerHTML = '<p style="text-align: center; color: #666;">Votre commande est vide</p>';
             orderTotal.innerHTML = '';
             return;
         }
