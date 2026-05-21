@@ -118,6 +118,112 @@ footer {
 .hidden {
     display: none !important;
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        list-style: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        width: 95%;
+    }
+
+    footer {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        gap: 0.5rem;
+    }
+
+    main {
+        margin: 0.75rem auto;
+        width: 98%;
+        padding: 0 0.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
 :root {
     --dark: #1e2937;
     --primary: #3b82f6;

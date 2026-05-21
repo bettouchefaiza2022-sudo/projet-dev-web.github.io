@@ -45,12 +45,21 @@
     <header>
         <nav>
             <a href="../index.html" class="logo">AutoElite</a>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="produits.html">Nos Voitures</a></li>
             </ul>
         </nav>
     </header>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
     <main>
         <div class="confirmation-container">
